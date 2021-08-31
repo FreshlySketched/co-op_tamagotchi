@@ -7,4 +7,4 @@
 5. When making commits and/or pull requests be clear in your comments
 6. Ask if you have questions
 7. Pull requests for current-build require 3 approvals
-8.
+8. Pull requests for review require 2 approvals
