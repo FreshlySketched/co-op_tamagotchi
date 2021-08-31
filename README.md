@@ -6,3 +6,5 @@
 4. Assign yourself to the Trello tasks and make sure to communicate with others on that task
 5. When making commits and/or pull requests be clear in your comments
 6. Ask if you have questions
+7. Pull requests for current-build require 3 approvals
+8.
