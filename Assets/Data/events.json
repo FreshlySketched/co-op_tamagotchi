@@ -1,0 +1,81 @@
+{
+    "events": [
+        {
+            "_eventName": "EVENT",
+            "_flavourText": "FLAVOUR TEXT!",
+            "_interaction": true,
+            "_interactionText": "INTERACTION FLAVOUR TEXT",
+            "_effects": [
+                {
+                    "effect": 0,
+                    "stat": 0,
+                    "amount": 5
+                },
+                {
+                    "effect": 0,
+                    "stat": 1,
+                    "amount": 10
+                },
+                {
+                    "effect": 1,
+                    "stat": 2,
+                    "amount": 15
+                }
+            ]
+        },
+        {
+            "_eventName": "New Event",
+            "_flavourText": "Extra flavour text",
+            "_interaction": false,
+            "_interactionText": "INTERACTION",
+            "_effects": [
+                {
+                    "effect": 0,
+                    "stat": 1,
+                    "amount": 5
+                },
+                {
+                    "effect": 1,
+                    "stat": 0,
+                    "amount": 10
+                }
+            ]
+        },
+        {
+            "_eventName": "Third Event",
+            "_flavourText": "A third event",
+            "_interaction": false,
+            "_interactionText": "INTERACTION",
+            "_effects": [
+                {
+                    "effect": 0,
+                    "stat": 0,
+                    "amount": 100
+                }
+            ]
+        },
+        {
+            "_eventName": "New Event",
+            "_flavourText": "Imaginative text",
+            "_interaction": true,
+            "_interactionText": "Gotta do some interaction",
+            "_effects": [
+                {
+                    "effect": 0,
+                    "stat": 0,
+                    "amount": 100
+                },
+                {
+                    "effect": 1,
+                    "stat": 1,
+                    "amount": 30
+                },
+                {
+                    "effect": 0,
+                    "stat": 2,
+                    "amount": 5
+                }
+            ]
+        }
+    ]
+}
