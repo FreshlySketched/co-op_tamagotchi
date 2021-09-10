@@ -1,0 +1,184 @@
+{
+    "events": [
+        {
+            "_eventName": "EVENT",
+            "_flavourText": "FLAVOUR TEXT!",
+            "_interaction": true,
+            "_interactionText": "INTERACTION FLAVOUR TEXT",
+            "_effects": [
+                {
+                    "effect": 0,
+                    "stat": 0,
+                    "amount": 5
+                },
+                {
+                    "effect": 0,
+                    "stat": 1,
+                    "amount": 10
+                },
+                {
+                    "effect": 1,
+                    "stat": 2,
+                    "amount": 15
+                }
+            ]
+        },
+        {
+            "_eventName": "New Event",
+            "_flavourText": "Extra flavour text",
+            "_interaction": false,
+            "_interactionText": "INTERACTION",
+            "_effects": [
+                {
+                    "effect": 0,
+                    "stat": 1,
+                    "amount": 5
+                },
+                {
+                    "effect": 1,
+                    "stat": 0,
+                    "amount": 10
+                }
+            ]
+        },
+        {
+            "_eventName": "Third Event",
+            "_flavourText": "A third event",
+            "_interaction": false,
+            "_interactionText": "INTERACTION",
+            "_effects": [
+                {
+                    "effect": 0,
+                    "stat": 0,
+                    "amount": 100
+                }
+            ]
+        },
+        {
+            "_eventName": "New Event",
+            "_flavourText": "Imaginative text",
+            "_interaction": true,
+            "_interactionText": "Gotta do some interaction",
+            "_effects": [
+                {
+                    "effect": 0,
+                    "stat": 0,
+                    "amount": 100
+                },
+                {
+                    "effect": 1,
+                    "stat": 1,
+                    "amount": 30
+                },
+                {
+                    "effect": 0,
+                    "stat": 2,
+                    "amount": 5
+                }
+            ]
+        },
+        {
+            "_eventName": "Gets hit by bus",
+            "_flavourText": "You're student got hit by a bus on campus.",
+            "_interaction": false,
+            "_interactionText": "",
+            "_effects": [
+                {
+                    "effect": 0,
+                    "stat": 1,
+                    "amount": 10
+                },
+                {
+                    "effect": 1,
+                    "stat": 0,
+                    "amount": 10
+                },
+                {
+                    "effect": 0,
+                    "stat": 2,
+                    "amount": 1000
+                }
+            ]
+        },
+        {
+            "_eventName": "Student slept through an exam",
+            "_flavourText": "Yeah, they fell asleep in the exam room as they started...",
+            "_interaction": false,
+            "_interactionText": "",
+            "_effects": [
+                {
+                    "effect": 1,
+                    "stat": 0,
+                    "amount": 10
+                },
+                {
+                    "effect": 1,
+                    "stat": 1,
+                    "amount": 15
+                },
+                {
+                    "effect": 1,
+                    "stat": 2,
+                    "amount": 5
+                }
+            ]
+        },
+        {
+            "_eventName": "New List Event",
+            "_flavourText": "Functions with lists",
+            "_interaction": true,
+            "_interactionText": "INTERACTION!",
+            "_effects": [
+                {
+                    "effect": 0,
+                    "stat": 1,
+                    "amount": 5
+                }
+            ]
+        },
+        {
+            "_eventName": " Save event test",
+            "_flavourText": "save test",
+            "_interaction": true,
+            "_interactionText": "",
+            "_effects": [
+                {
+                    "effect": 1,
+                    "stat": 1,
+                    "amount": 1
+                }
+            ]
+        },
+        {
+            "_eventName": "Save test 2",
+            "_flavourText": "",
+            "_interaction": false,
+            "_interactionText": "",
+            "_effects": [
+                {
+                    "effect": 0,
+                    "stat": 0,
+                    "amount": 5
+                }
+            ]
+        },
+        {
+            "_eventName": "Refresh test",
+            "_flavourText": "Refresh some flavour",
+            "_interaction": true,
+            "_interactionText": "Refresh interaction",
+            "_effects": [
+                {
+                    "effect": 0,
+                    "stat": 0,
+                    "amount": 5
+                },
+                {
+                    "effect": 0,
+                    "stat": 1,
+                    "amount": 0
+                }
+            ]
+        }
+    ]
+}
