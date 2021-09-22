@@ -1,5 +1,7 @@
 # Welcome to the Co-op Game Repository
+
 ## Instructions
+
 1. Check if there is a branch for your assigned Trello card (similar name). If not, create one
 2. Compare your branch to the current-build branch
 3. Work only within your branch or sub-branches which derive from your branch
@@ -11,4 +13,4 @@
 9. Ask if you have questions
 
 This is a test for the GDD tutorial
-brrrr
+I dont want to say brrr anymore
