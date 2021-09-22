@@ -11,6 +11,3 @@
 7. Pull requests for `current-build` require approvals from other developers
 8. Pull requests for `review` require approvals from other developers
 9. Ask if you have questions
-
-This is a test for the GDD tutorial
-I dont want to say brrr anymore
