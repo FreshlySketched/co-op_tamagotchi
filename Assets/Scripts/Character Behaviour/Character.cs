@@ -14,6 +14,10 @@ public class Character : ScriptableObject
 	[Tooltip("The display name of this character")]
 	private string _displayName;
 	
+	[SerializedField()]
+	[Tooltip("The flavour text show during character selection")]
+	private string _selectDescription;
+	
 	[Header("Character Stats")]
 	
 	[SerializeField()]
@@ -89,6 +93,14 @@ public class Character : ScriptableObject
 		get
 		{
 			return this._selectPrefab;
+		}
+	}
+	
+	public string SelectDescription
+	{
+		get
+		{
+			return this._selectDescription;
 		}
 	}
 }
