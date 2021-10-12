@@ -17,14 +17,20 @@ public class CharacterSelectRandomiser : MonoBehaviour
 	[Min(1)]
 	public int NumberOfCharacters;
 	
+	[SerializeField()]
+	[Tooltip("The prefab to use for the character select buttons")]
+	private GameObject _selectorPrefab;
+	
 	/** Set the target character of child character selectors randomly */
 	private void SetupCharacterSelectors()
 	{
 		List<Character> characters = this.Characters.GetRandomCharacters(this.NumberOfCharacters);
-		GameObject selector;
+		CharacterSelector selector;
 		for (int i = 0; i < this.NumberOfCharacters; ++i)
 		{
-			selector = Object.Instantiate(characters[i].SelectPrefab, this.transform);
+			selector = Object.Instantiate(this._selectorPrefab, this.transform).GetComponent<CharacterSelector>();
+			selector.TargetCharacter = characters[i];
+			selector.SetupConfirmation();
 		}
 	}
 	

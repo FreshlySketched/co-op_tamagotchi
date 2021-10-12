@@ -39,8 +39,8 @@ public class Character : ScriptableObject
 	[Header("Art Assets")]
 	
 	[SerializeField()]
-	[Tooltip("The prefab used on the character select screen")]
-	private GameObject _selectPrefab;
+	[Tooltip("The sprite used on the character select screen")]
+	private Sprite _selectSprite;
 	
 	/** The display name of this character */
 	public string DisplayName
@@ -87,12 +87,12 @@ public class Character : ScriptableObject
 		}
 	}
 	
-	/** The prefab used on the character select screen */
-	public GameObject SelectPrefab
+	/** The sprite used on the character select screen */
+	public Sprite SelectSprite
 	{
 		get
 		{
-			return this._selectPrefab;
+			return this._selectSprite;
 		}
 	}
 	
