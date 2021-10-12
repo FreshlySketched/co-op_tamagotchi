@@ -96,6 +96,7 @@ public class Character : ScriptableObject
 		}
 	}
 	
+	/** The text used on the character select screen to describe this character */
 	public string SelectDescription
 	{
 		get
