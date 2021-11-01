@@ -13,15 +13,15 @@ public class CharacterSelector : MonoBehaviour
 	
 	[Header("Prefab References")]
 	
-	[SerializedField()]
+	[SerializeField()]
 	[Tooltip("The game object to enable when confirming character selection")]
 	private GameObject _confirmPane;
 	
-	[SerializedField()]
+	[SerializeField()]
 	[Tooltip("The text component to place the character description in")]
-	private UI.Text _confirmText;
+	private Text _confirmText;
 	
-	[SerializedField()]
+	[SerializeField()]
 	[Tooltip("The sprite renderer to place the character sprite in")]
 	private SpriteRenderer _confirmSprite;
 	
@@ -44,12 +44,12 @@ public class CharacterSelector : MonoBehaviour
 	/** Show the confirmation pane for this character selector */
 	public void ShowConfirmation()
 	{
-		this._confirmPane.SetEnabled(true);
+		this._confirmPane.SetActive(true);
 	}
 	
 	/** Hide the confirmation pane for this character selector */
 	public void HideConfirmation()
 	{
-		this._confirmPane.SetEnabled(false);
+		this._confirmPane.SetActive(false);
 	}
 }

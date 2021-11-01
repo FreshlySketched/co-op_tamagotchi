@@ -14,7 +14,7 @@ public class Character : ScriptableObject
 	[Tooltip("The display name of this character")]
 	private string _displayName;
 	
-	[SerializedField()]
+	[SerializeField()]
 	[Tooltip("The flavour text show during character selection")]
 	private string _selectDescription;
 	
