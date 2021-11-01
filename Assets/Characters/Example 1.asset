@@ -21,3 +21,5 @@ MonoBehaviour:
     _value: 0.5
   _passion:
     _value: 0.5
+  _selectDescription: This is the description for Example 1.
+  _selectSprite: {fileID: 21300000, guid: f714762415b8b054988f96e3cabec00d, type: 3}
