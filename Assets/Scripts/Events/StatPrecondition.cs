@@ -1,4 +1,9 @@
 using UnityEngine;
+
+/** A precondition which tests the value of a stat
+ * \author Rhys Mader
+ * \date 1 Nov 2021\
+ */
 public class StatPrecondition : Precondition
 {
 	/** An enumeration of the stats available to be tested with the stat precondition */
@@ -13,13 +18,26 @@ public class StatPrecondition : Precondition
 		Health,
 		Fun
 	}
+	
 	[SerializeField()]
+	[Tooltip("The stat to test with this precondition.")]
 	private StatName _name;
+	
 	[SerializeField()]
+	[Tooltip("The minimum value the tested stat may have to pass.")]
+	[Range(Stat.MIN, Stat.MAX)]
 	private float _min;
+	
 	[SerializeField()]
+	[Tooltip("The maximum value the tested stat may have to pass.")]
+	[Range(this._min, Stat.MAX)]
 	private float _max;
-	public override bool Fulfilled(Student s)
+	
+	/** Test if the given student has specified stat's value within the specified bounds
+	 * \param s The student to test
+	 * \return True if the given student passes the test
+	 */
+	public override bool IsAccepted(Student s)
 	{
 		switch (this._name)
 		{
@@ -43,6 +61,7 @@ public class StatPrecondition : Precondition
 				throw new System.Exception("Unmatchable stat given for stat precondition");
 		}
 	}
+	
 	/** Test if the given value is within the bounds of this precondition
 	 * \param val The value to test
 	 * \return True if the given value is within the bounds of this precondition
