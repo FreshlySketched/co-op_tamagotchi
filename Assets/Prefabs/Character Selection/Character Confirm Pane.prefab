@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 4770983692620922330}
   - component: {fileID: 4770983692620922331}
   - component: {fileID: 4770983692620922328}
+  - component: {fileID: 4806980795515838772}
   m_Layer: 5
   m_Name: Confirm Button
   m_TagString: Untagged
@@ -120,19 +121,20 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 4770983692620922331}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
+--- !u!114 &4806980795515838772
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4770983692620922334}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2be1d8f5e6bc10f4b83c9d0afe7ffa65, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _scenePath: Assets/Scenes/DesignerPlayground.unity
 --- !u!1 &4770983693117221864
 GameObject:
   m_ObjectHideFlags: 0
@@ -960,14 +962,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f1a255a0cec6d8f4da8411d21d27eb1d, type: 3}
---- !u!224 &14131140788672725 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 4757987409047769705, guid: f1a255a0cec6d8f4da8411d21d27eb1d, type: 3}
-  m_PrefabInstance: {fileID: 4770983694316341948}
-  m_PrefabAsset: {fileID: 0}
 --- !u!224 &6828292575443280545 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 2087145263294834717, guid: f1a255a0cec6d8f4da8411d21d27eb1d, type: 3}
+  m_PrefabInstance: {fileID: 4770983694316341948}
+  m_PrefabAsset: {fileID: 0}
+--- !u!224 &14131140788672725 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 4757987409047769705, guid: f1a255a0cec6d8f4da8411d21d27eb1d, type: 3}
   m_PrefabInstance: {fileID: 4770983694316341948}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &4770983694376167974
@@ -1067,13 +1069,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f1a255a0cec6d8f4da8411d21d27eb1d, type: 3}
---- !u!224 &14131140846303311 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 4757987409047769705, guid: f1a255a0cec6d8f4da8411d21d27eb1d, type: 3}
-  m_PrefabInstance: {fileID: 4770983694376167974}
-  m_PrefabAsset: {fileID: 0}
 --- !u!224 &6828292575366677051 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 2087145263294834717, guid: f1a255a0cec6d8f4da8411d21d27eb1d, type: 3}
+  m_PrefabInstance: {fileID: 4770983694376167974}
+  m_PrefabAsset: {fileID: 0}
+--- !u!224 &14131140846303311 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 4757987409047769705, guid: f1a255a0cec6d8f4da8411d21d27eb1d, type: 3}
   m_PrefabInstance: {fileID: 4770983694376167974}
   m_PrefabAsset: {fileID: 0}
