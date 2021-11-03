@@ -19,7 +19,7 @@ public class CharacterSelector : MonoBehaviour
 
 	[SerializeField()]
 	[Tooltip("The text element to place the character name in")]
-	private Text _selectText;
+	private Text _selectName;
 
 	[SerializeField()]
 	[Tooltip("The image element to place the character sprite in")]
@@ -33,7 +33,7 @@ public class CharacterSelector : MonoBehaviour
 	
 	[SerializeField()]
 	[Tooltip("The text element to place the character description in")]
-	private Text _confirmText;
+	private Text _confirmDescription;
 	
 	[SerializeField()]
 	[Tooltip("The image element to place the character sprite in")]
@@ -51,7 +51,7 @@ public class CharacterSelector : MonoBehaviour
 	 */
 	public void SetupSelection()
 	{
-		this._selectText.text = this.TargetCharacter.DisplayName;
+		this._selectName.text = this.TargetCharacter.DisplayName;
 		this._selectSprite.sprite = this.TargetCharacter.SelectSprite;
 	}
 
@@ -72,7 +72,7 @@ public class CharacterSelector : MonoBehaviour
 	 */
 	public void SetupConfirmation()
 	{
-		this._confirmText.text = this.TargetCharacter.SelectDescription;
+		this._confirmDescription.text = this.TargetCharacter.SelectDescription;
 		this._confirmSprite.sprite = this.TargetCharacter.SelectSprite;
 	}
 	
