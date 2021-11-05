@@ -30,14 +30,18 @@ public class CharacterSelector : MonoBehaviour
 	[SerializeField()]
 	[Tooltip("The game object to have enabled while confirming character selection")]
 	private GameObject _confirmPane;
-	
+
 	[SerializeField()]
-	[Tooltip("The text element to place the character description in")]
-	private Text _confirmDescription;
+	[Tooltip("The text element to place the character name in")]
+	private Text _confirmName;
 	
 	[SerializeField()]
 	[Tooltip("The image element to place the character sprite in")]
 	private Image _confirmSprite;
+	
+	[SerializeField()]
+	[Tooltip("The text element to place the character description in")]
+	private Text _confirmDescription;
 	
 	/** Create a student from the target character and set it as the active student */
 	public void CreateStudent()
@@ -72,8 +76,9 @@ public class CharacterSelector : MonoBehaviour
 	 */
 	public void SetupConfirmation()
 	{
-		this._confirmDescription.text = this.TargetCharacter.SelectDescription;
+		this._confirmName.text = this.TargetCharacter.DisplayName;
 		this._confirmSprite.sprite = this.TargetCharacter.SelectSprite;
+		this._confirmDescription.text = this.TargetCharacter.SelectDescription;
 	}
 	
 	/** Show the confirmation pane */
