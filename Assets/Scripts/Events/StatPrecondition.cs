@@ -30,12 +30,13 @@ public class StatPrecondition : Precondition
 	
 	[SerializeField()]
 	[Tooltip("The maximum value the tested stat may have to pass.")]
-	[Range(this._min, Stat.MAX)]
+	[Range(Stat.MIN, Stat.MAX)]
 	private float _max;
 	
 	/** Test if the given student has specified stat's value within the specified bounds
 	 * \param s The student to test
 	 * \return True if the given student passes the test
+	 * \throw Exception The specified stat could not be matched to a character or student stat
 	 */
 	public override bool IsAccepted(Student s)
 	{
@@ -69,5 +70,21 @@ public class StatPrecondition : Precondition
 	private bool CheckBounds(float val)
 	{
 		return val <= this._max && val >= this._min;
+	}
+
+	/** Throw an error if the min is greater than the max
+	\throw Exception The specified bounds are invalid
+	*/
+	private void ValidateBounds()
+	{
+		if (this._min > this._max)
+		{
+			throw new System.Exception("Invalid bounds: min must not be greater than max");
+		}
+	}
+
+	private void OnValidate()
+	{
+		this.ValidateBounds();
 	}
 }
