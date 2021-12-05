@@ -12,24 +12,16 @@ public class CharacterSelectRandomiser : MonoBehaviour
 	[Tooltip("The store of characters to choose from")]
 	public CharacterStore Characters;
 	
-	[SerializeField()]
-	[Tooltip("The number of characters to add to the character select screen")]
-	[Min(1)]
-	public int NumberOfCharacters;
-	
-	[SerializeField()]
-	[Tooltip("The prefab to use for the character select buttons")]
-	private GameObject _selectorPrefab;
-	
 	/** Set the target character of child character selectors randomly */
 	private void SetupCharacterSelectors()
 	{
-		List<Character> characters = this.Characters.GetRandomCharacters(this.NumberOfCharacters);
+		List<Character> characters = this.Characters.GetRandomCharacters(this.transform.childCount);
 		CharacterSelector selector;
-		for (int i = 0; i < this.NumberOfCharacters; ++i)
+		for (int i = 0; i < this.transform.childCount; ++i)
 		{
-			selector = Object.Instantiate(this._selectorPrefab, this.transform).GetComponent<CharacterSelector>();
+			selector = this.transform.GetChild(i).gameObject.GetComponent<CharacterSelector>();
 			selector.TargetCharacter = characters[i];
+			selector.SetupSelection();
 			selector.SetupConfirmation();
 		}
 	}

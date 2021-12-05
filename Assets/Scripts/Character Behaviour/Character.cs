@@ -14,10 +14,6 @@ public class Character : ScriptableObject
 	[Tooltip("The display name of this character")]
 	private string _displayName;
 	
-	[SerializeField()]
-	[Tooltip("The flavour text show during character selection")]
-	private string _selectDescription;
-	
 	[Header("Character Stats")]
 	
 	[SerializeField()]
@@ -36,7 +32,11 @@ public class Character : ScriptableObject
 	[Tooltip("The passion stat of this character")]
 	private Stat _passion = new Stat("Passion");
 	
-	[Header("Art Assets")]
+	[Header("Character Selection")]
+	
+	[SerializeField()]
+	[Tooltip("The flavour text show during character selection")]
+	private string _selectDescription;
 	
 	[SerializeField()]
 	[Tooltip("The sprite used on the character select screen")]
