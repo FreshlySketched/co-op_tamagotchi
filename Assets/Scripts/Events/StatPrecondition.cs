@@ -6,19 +6,6 @@ using UnityEngine;
  */
 public class StatPrecondition : Precondition
 {
-	/** An enumeration of the stats available to be tested with the stat precondition */
-	public enum StatName
-	{
-		Intelligence,
-		Charisma,
-		Constitution,
-		Passion,
-		Study,
-		Social,
-		Health,
-		Fun
-	}
-	
 	[SerializeField()]
 	[Tooltip("The stat to test with this precondition.")]
 	private StatName _name;
@@ -40,27 +27,7 @@ public class StatPrecondition : Precondition
 	 */
 	public override bool IsAccepted(Student s)
 	{
-		switch (this._name)
-		{
-			case StatName.Intelligence:
-				return this.CheckBounds(s.Character.Intelligence.Value);
-			case StatName.Charisma:
-				return this.CheckBounds(s.Character.Charisma.Value);
-			case StatName.Constitution:
-				return this.CheckBounds(s.Character.Constitution.Value);
-			case StatName.Passion:
-				return this.CheckBounds(s.Character.Passion.Value);
-			case StatName.Study:
-				return this.CheckBounds(s.Study.Value);
-			case StatName.Social:
-				return this.CheckBounds(s.Social.Value);
-			case StatName.Health:
-				return this.CheckBounds(s.Health.Value);
-			case StatName.Fun:
-				return this.CheckBounds(s.Fun.Value);
-			default:
-				throw new System.Exception("Unmatchable stat given for stat precondition");
-		}
+		return this.CheckBounds(s.GetStat(this._name).Value);
 	}
 	
 	/** Test if the given value is within the bounds of this precondition

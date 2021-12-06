@@ -7,12 +7,15 @@ using System.Collections.ObjectModel;
  * \date 11 Sep 2021
  */
 [CreateAssetMenu(menuName="Characters/Character Store")]
-[System.Serializable()]
+[System.Serializable]
 public class CharacterStore : ScriptableObject
 {
-	[SerializeField()]
+	[SerializeField]
 	[Tooltip("The list of characters in the game")]
 	public List<Character> _characters = new List<Character>();
+
+	/** The random number generator used to randomise characters */
+	static private System.Random rng = new System.Random();
 	
 	/** The list of characters in the game */
 	public ReadOnlyCollection<Character> Characters
@@ -57,7 +60,7 @@ public class CharacterStore : ScriptableObject
 		int index;
 		for (int i = n; i > 0; --i)
 		{
-			index = Random.Range(0, pool.Count);
+			index = CharacterStore.rng.Next(pool.Count);
 			selected.Add(pool[index]);
 			pool.RemoveAt(index);
 		}

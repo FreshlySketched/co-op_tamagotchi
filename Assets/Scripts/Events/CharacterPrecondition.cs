@@ -7,7 +7,7 @@ using UnityEngine;
   */
 public class CharacterPrecondition : Precondition
 {
-	[SerializeField()]
+	[SerializeField]
 	[Tooltip("The character names accepted by this precondition.")]
 	private List<string> _characterNames;
 	

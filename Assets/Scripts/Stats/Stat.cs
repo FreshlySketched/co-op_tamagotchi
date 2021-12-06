@@ -43,20 +43,17 @@ public class Stat
 		}
 		set
 		{
-			if (value < Stat.MIN || value > Stat.MAX)
+			if (value < Stat.MIN)
 			{
-				throw new System.Exception("Stat value out of bounds");
+				this._value = Stat.MIN;
+				return;
+			}
+			if (value > Stat.MAX)
+			{
+				this._value = Stat.MAX;
+				return;
 			}
 			this._value = value;
 		}
-	}
-	
-	/** Instantaneously apply the given effect
-	 * \param ef The effect to apply to this stat
-	 */
-	public void ApplyEffect(Effect ef)
-	{
-		this._value *= ef.Multiplier;
-		this._value += ef.Adjustment;
 	}
 }

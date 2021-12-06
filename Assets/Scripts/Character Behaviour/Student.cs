@@ -4,7 +4,7 @@ using UnityEngine;
   * \suthor Rhys Mader
   * \date 12 Sep 2021
   */
-public class Student
+public class Student : IStatGetter, IDynamicStatGetter
 {
 	[SerializeField()]
 	[Tooltip("The character this student was created from")]
@@ -32,7 +32,7 @@ public class Student
 	public Stat Fun { get; private set; }
 	
 	/** The number of checkpoints this student has passed */
-	public int Progression { get; private set; } = 0;
+	public uint Progression { get; private set; } = 0;
 	
 	/** The student which is currently active */
 	static public Student ActiveStudent { get; set; } = null;
@@ -53,5 +53,45 @@ public class Student
 	public void IncrementProgression()
 	{
 		this.Progression += 1;
+	}
+
+	public Stat GetStat(StatName stat)
+	{
+		switch(stat)
+		{
+		case StatName.Intelligence:
+			return this.Character.Intelligence;
+		case StatName.Charisma:
+			return this.Character.Charisma;
+		case StatName.Constitution:
+			return this.Character.Constitution;
+		case StatName.Passion:
+			return this.Character.Passion;
+		case StatName.Study:
+			return this.Study;
+		case StatName.Social:
+			return this.Social;
+		case StatName.Health:
+			return this.Health;
+		case StatName.Fun:
+			return this.Fun;
+		}
+		throw new System.Exception("Stat not found");
+	}
+
+	public Stat GetStat(DynamicStatName stat)
+	{
+		switch(stat)
+		{
+		case DynamicStatName.Study:
+			return this.Study;
+		case DynamicStatName.Social:
+			return this.Social;
+		case DynamicStatName.Health:
+			return this.Health;
+		case DynamicStatName.Fun:
+			return this.Fun;
+		}
+		throw new System.Exception("Stat not found");
 	}
 }
