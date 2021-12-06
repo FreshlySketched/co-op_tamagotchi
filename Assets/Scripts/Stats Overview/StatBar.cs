@@ -7,18 +7,9 @@ using UnityEngine.UI;
 */
 public class StatBar : MonoBehaviour
 {
-	/** An enumeration of the dynamic stats */
-	public enum DynamicStat
-	{
-		Study,
-		Social,
-		Health,
-		Fun
-	}
-
 	[SerializeField]
 	[Tooltip("The stat this bar should display")]
-	private DynamicStat _stat;
+	private DynamicStatName _stat;
 
 	[SerializeField]
 	[Tooltip("The text element to place the stat name in")]
@@ -29,28 +20,12 @@ public class StatBar : MonoBehaviour
 	private Slider _bar;
 
 	/** Update this bar and label with the stats of the given student
-	\param s The student to retreive stat information from
+	\param target The student to retreive stat information from
 	\throw Exception The specified stat could not be found
 	*/
-	private void UpdateGUI(Student s)
+	private void UpdateGUI(Student target)
 	{
-		switch (this._stat)
-		{
-		case DynamicStat.Study:
-			this.UpdateElements(s.Study);
-			break;
-		case DynamicStat.Social:
-			this.UpdateElements(s.Social);
-			break;
-		case DynamicStat.Health:
-			this.UpdateElements(s.Health);
-			break;
-		case DynamicStat.Fun:
-			this.UpdateElements(s.Fun);
-			break;
-		default:
-			throw new System.Exception("Unmatched bar stat");
-		}
+		this.UpdateElements(target.GetStat(this._stat));
 	}
 
 	/** Update this bar and label with the given stat

@@ -5,8 +5,8 @@
 public abstract class Precondition
 {
 	/** Test if the given student fulfills this precondition
-	 * \param cha The student to test
+	 * \param target The student to test
 	 * \return True if this precondition is fulfilled by the given student
 	 */
-	public abstract bool IsAccepted(Student cha);
+	public abstract bool IsAccepted(Student target);
 }

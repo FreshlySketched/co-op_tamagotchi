@@ -12,11 +12,11 @@ public class CharacterPrecondition : Precondition
 	private List<string> _characterNames;
 	
 	/** Test if the give student is based on a character with one of the specified names
-	 * \param s The student to test
+	 * \param target The student to test
 	 * \return True if the given student has one of the specified names
 	 */
-	public override bool IsAccepted(Student s)
+	public override bool IsAccepted(Student target)
 	{
-		return this._characterNames.Contains(s.Character.DisplayName);
+		return this._characterNames.Contains(target.Character.DisplayName);
 	}
 }

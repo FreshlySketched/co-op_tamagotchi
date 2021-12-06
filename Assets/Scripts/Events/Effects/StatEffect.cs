@@ -5,7 +5,7 @@ using UnityEngine;
  * \date 10 Sep 2021
  */
 [System.Serializable]
-public class Effect
+public class StatEffect : Effect
 {
 	[SerializeField]
 	[Tooltip("The stat this effect affects")]
@@ -20,11 +20,11 @@ public class Effect
 	private float _adjustment = 0;
 
 	/** Apply this effect to the associated stat of the given object
-	\param src The object to modify the stats of
+	\param target The object to modify the stats of
 	*/
-	public void Apply(IDynamicStatGetter src)
+	public override void Apply(Student target)
 	{
-		Stat s = src.GetStat(this._stat);
+		Stat s = target.GetStat(this._stat);
 		s.Value *= this._multiplier;
 		s.Value += this._adjustment;
 	}

@@ -16,11 +16,11 @@ public class WeightedStat
 	public StatName _stat;
 	
 	/** The weighted value of the associated stat 
-	\param src The object to retreive the stat from
+	\param target The object to retreive the stat from
 	\return The weighted value of associated stat from the given object
 	*/
-	public float CalcWeightedValue(IStatGetter src)
+	public float CalcWeightedValue(IStatGetter target)
 	{
-		return src.GetStat(this._stat).Value * this._weight;
+		return target.GetStat(this._stat).Value * this._weight;
 	}
 }

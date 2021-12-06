@@ -21,13 +21,13 @@ public class StatPrecondition : Precondition
 	private float _max;
 	
 	/** Test if the given student has specified stat's value within the specified bounds
-	 * \param s The student to test
+	 * \param target The student to test
 	 * \return True if the given student passes the test
 	 * \throw Exception The specified stat could not be matched to a character or student stat
 	 */
-	public override bool IsAccepted(Student s)
+	public override bool IsAccepted(Student target)
 	{
-		return this.CheckBounds(s.GetStat(this._name).Value);
+		return this.CheckBounds(target.GetStat(this._name).Value);
 	}
 	
 	/** Test if the given value is within the bounds of this precondition
@@ -42,16 +42,11 @@ public class StatPrecondition : Precondition
 	/** Throw an error if the min is greater than the max
 	\throw Exception The specified bounds are invalid
 	*/
-	private void ValidateBounds()
+	public void ValidateBounds()
 	{
 		if (this._min > this._max)
 		{
 			throw new System.Exception("Invalid bounds: min must not be greater than max");
 		}
-	}
-
-	private void OnValidate()
-	{
-		this.ValidateBounds();
 	}
 }
