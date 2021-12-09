@@ -9,14 +9,20 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18d947185f289e4095d569beedd881e, type: 3}
-  m_Name: binary example
+  m_Script: {fileID: 11500000, guid: b8dd99f58c6f2304c98e2d47055dc6c2, type: 3}
+  m_Name: New Event
   m_EditorClassIdentifier: 
-  _name: 
+  _title: 
+  _description: 
   _baseProbability: 0
   _probabiltyFactors: []
-  _prompt: 
-  _yesDescription: 
-  _yesEffects: []
-  _noDescription: 
-  _noEffects: []
+  _options:
+  - _title: 
+    _description: 
+    _label: 
+    _effects:
+    - _type: 2
+      _stat:
+        _stat: 0
+        _multiplier: 0
+        _adjustment: 0

@@ -557,6 +557,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4234185912208809808, guid: e69dd94dbc1eb944b9aaa908042f286d, type: 3}
+      propertyPath: _stat
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4267973196884736647, guid: e69dd94dbc1eb944b9aaa908042f286d, type: 3}
       propertyPath: m_Name
       value: Stat Bar
@@ -665,7 +669,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4234185912208809808, guid: e69dd94dbc1eb944b9aaa908042f286d, type: 3}
       propertyPath: _stat
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4267973196884736647, guid: e69dd94dbc1eb944b9aaa908042f286d, type: 3}
       propertyPath: m_Name
@@ -775,7 +779,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4234185912208809808, guid: e69dd94dbc1eb944b9aaa908042f286d, type: 3}
       propertyPath: _stat
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4267973196884736647, guid: e69dd94dbc1eb944b9aaa908042f286d, type: 3}
       propertyPath: m_Name
@@ -987,7 +991,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4234185912208809808, guid: e69dd94dbc1eb944b9aaa908042f286d, type: 3}
       propertyPath: _stat
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 4267973196884736647, guid: e69dd94dbc1eb944b9aaa908042f286d, type: 3}
       propertyPath: m_Name
