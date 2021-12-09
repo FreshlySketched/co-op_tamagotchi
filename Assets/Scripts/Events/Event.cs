@@ -1,37 +1,62 @@
 using UnityEngine;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 
-/** The base class for a custom asset for random events
+/** A custom asset for random events
  * \author Rhys Mader
  * \date 5 Dec 2021
  */
-public abstract class Event : ScriptableObject
+[CreateAssetMenu(menuName="Events/Event")]
+public class Event : ScriptableObject
 {
 	[SerializeField]
-	[Tooltip("The name of this event displayed to the player")]
-	protected string _name;
+	[Tooltip("The title to display at the top of the event prompt dialog")]
+	private string _title;
 
-	/** The name of this event displayed to the player */
-	public string Name
+	public string Title
 	{
 		get
 		{
-			return this._name;
+			return this._title;
+		}
+	}
+
+	[SerializeField]
+	[Tooltip("The description to display in the body of the event prompt dialog")]
+	private string _description;
+
+	public string Description
+	{
+		get
+		{
+			return this._description;
 		}
 	}
 
 	[SerializeField]
 	[Tooltip("The conditions a student must meet for this event to have a chance of appearing")]
-	protected List<Precondition> _preconditions;
+	private List<PreconditionWrapper> _preconditions;
 
 	[SerializeField]
 	[Tooltip("The base likelihood of this event ocurring assuming its preconditions have been satisfied")]
 	[Min(0)]
-	protected float _baseProbability;
+	private float _baseProbability;
 
 	[SerializeField]
 	[Tooltip("The stats that affect the likelihood of this event ocurring and how much they do so")]
-	protected List<WeightedStat> _probabiltyFactors;
+	private List<WeightedStat> _probabiltyFactors;
+
+	[SerializeField]
+	[Tooltip("The options presented to the player for this event")]
+	private List<EventOption> _options;
+
+	public ReadOnlyCollection<EventOption> Options
+	{
+		get
+		{
+			return this._options.AsReadOnly();
+		}
+	}
 
 	/** Calculate the probability of this event ocurring for the given student
 	 * \param student The student to calculate the probability for

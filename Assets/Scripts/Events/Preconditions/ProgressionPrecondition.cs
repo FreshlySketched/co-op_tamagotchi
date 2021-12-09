@@ -1,8 +1,10 @@
+using UnityEngine;
+
 /** A precondition that tests the student's progression
 \author Rhys Mader
 \date 5 Nov 2021
 */
-using UnityEngine;
+[System.Serializable]
 public class ProgressionPrecondition : Precondition
 {
 	[SerializeField]

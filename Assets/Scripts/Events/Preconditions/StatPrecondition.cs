@@ -4,6 +4,7 @@ using UnityEngine;
  * \author Rhys Mader
  * \date 1 Nov 2021\
  */
+ [System.Serializable]
 public class StatPrecondition : Precondition
 {
 	[SerializeField()]

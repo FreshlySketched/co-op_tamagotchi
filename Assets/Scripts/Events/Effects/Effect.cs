@@ -2,6 +2,7 @@
 \author Rhys Mader
 \date 6 Dec 2021
 */
+[System.Serializable]
 public abstract class Effect
 {
 	/** Apply this effect to the given student

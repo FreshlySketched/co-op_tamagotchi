@@ -2,6 +2,7 @@
 \author Rhys Mader
 \date 6 Dec 2021
 */
+[System.Serializable]
 class ProgressionEffect : Effect
 {
 	/** Increment the progression of the given student

@@ -8,12 +8,12 @@ using UnityEngine;
 public class WeightedStat
 {
 	[SerializeField]
-	[Tooltip("The coeffecient to apply to the current value of the stat")]
-	private float _weight;
-	
-	[SerializeField]
 	[Tooltip("The stat whose value should be weighted")]
 	public StatName _stat;
+
+	[SerializeField]
+	[Tooltip("The coeffecient to apply to the current value of the stat")]
+	private float _weight;
 	
 	/** The weighted value of the associated stat 
 	\param target The object to retreive the stat from
