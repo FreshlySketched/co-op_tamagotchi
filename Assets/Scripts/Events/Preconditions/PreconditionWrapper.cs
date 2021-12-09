@@ -29,12 +29,18 @@ public class PreconditionWrapper : Precondition
 	}
 
 	[SerializeField]
+	[Conditional("_type", PreconditionType.Stat)]
+	[Inline]
 	private StatPrecondition _stat;
 
 	[SerializeField]
+	[Conditional("_type", PreconditionType.Character)]
+	[Inline]
 	private CharacterPrecondition _character;
 
 	[SerializeField]
+	[Conditional("_type", PreconditionType.Progression)]
+	[Inline]
 	private ProgressionPrecondition _progression;
 
 	/** Test if the given student fulfills the selected precondition

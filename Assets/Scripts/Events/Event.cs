@@ -23,6 +23,7 @@ public class Event : ScriptableObject
 
 	[SerializeField]
 	[Tooltip("The description to display in the body of the event prompt dialog")]
+	[TextArea]
 	private string _description;
 
 	public string Description

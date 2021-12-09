@@ -22,6 +22,7 @@ public class EventOption
 
 	[SerializeField]
 	[Tooltip("The description to display in the body of the event result dislog")]
+	[TextArea]
 	private string _description;
 
 	public string Description

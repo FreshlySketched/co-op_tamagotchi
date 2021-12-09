@@ -13,11 +13,13 @@ public class StatPrecondition : Precondition
 	
 	[SerializeField()]
 	[Tooltip("The minimum value the tested stat may have to pass.")]
+	[Conditional("_name", StatName.None, true)]
 	[Range(Stat.MIN, Stat.MAX)]
 	private float _min;
 	
 	[SerializeField()]
 	[Tooltip("The maximum value the tested stat may have to pass.")]
+	[Conditional("_name", StatName.None, true)]
 	[Range(Stat.MIN, Stat.MAX)]
 	private float _max;
 	

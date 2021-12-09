@@ -13,6 +13,7 @@ public class WeightedStat
 
 	[SerializeField]
 	[Tooltip("The coeffecient to apply to the current value of the stat")]
+	[Conditional("_stat", StatName.None, true)]
 	private float _weight;
 	
 	/** The weighted value of the associated stat 

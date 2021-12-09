@@ -28,9 +28,13 @@ public class EffectWrapper : Effect
 	}
 
 	[SerializeField]
+	[Conditional("_type", EffectType.Stat)]
+	[Inline]
 	private StatEffect _stat;
 
 	[SerializeField]
+	[Conditional("_type", EffectType.Progression)]
+	[Inline]
 	private ProgressionEffect _progression;
 
 	/** Apply the selected effect type to the given target
